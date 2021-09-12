@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="Enter Your Name" id="name">
+        <input type="text" placeholder="Enter Your Age" id="age">
+        <input type="text" placeholder="Enter Your Monthly Internet Bill Amount" id="bill">
+        <input type="text" placeholder="Enter Your Yearly Maintenance Fee" id="maintenance">
+        <button type="button" onclick="getInputValue();">Get Value</button>
+    </form>
+    <div>
+        <p>Name : <span id="Name">N/A</span> </p>
+        <p>Age : <span id="Age"></span></p>
+        <p>Monthly Internet Bill : <span id="InternetBill"></span></p>
+        <p>Yearly device Maintenance Fees : <span id="MaintenanceFees"></span></p>
+        <p>Incentive amount : <span id="Incentive Amount" ></span></p>
+    </div>
+
+    <script>
+        function getInputValue(){
+            var inputName = document.getElementById("name").value;
+            var inputAge = document.getElementById("age").value;
+            var inputBill = document.getElementById("bill").value;
+            var inputMaintenance = document.getElementById("maintenance").value;
+
+
+            var intensiveAmount = document.getElementById("Incentive Amount").innerHTML;
+
+
+            var finalName = document.getElementById("Name").innerHTML;
+            document.getElementById("Name").innerHTML = inputName;
+            document.getElementById("Name").innerHTML = inputName;
+            document.getElementById("Name").innerHTML = inputName;
+            document.getElementById("Name").innerHTML = inputName;
+            
+            
+            if(inputAge>50 & inputMaintenance >= 20000){
+                 intensiveAmount = inputMaintenance * 0.2;
+            }
+            
+        }
+    </script>
+
+
+</body>
+</html>
